@@ -1,0 +1,46 @@
+/* Define a margem e o preenchimento de todos os elementos como zero */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para o elemento body */
+body {
+    /* Define a altura do corpo como 100% da altura da janela de visualização */
+    height: 100vh;
+    /* Utiliza um layout flexível para o corpo */
+    display: flex;
+    /* Centraliza verticalmente o conteúdo dentro do corpo */
+    align-items: last baseline;
+    /* Centraliza horizontalmente o conteúdo dentro do corpo */
+    justify-content: center;
+    /* Define o plano de fundo do corpo com uma imagem e um gradiente linear semi-transparente */
+    background:
+        linear-gradient(rgba(0, 0, 0,.2), rgba(71, 70, 70, 0.37)),
+        url("giphy.gif");
+    /* Define como a imagem de fundo deve ser repetida para preencher o corpo, usando o arredondamento automático */
+    background-repeat: round;
+    /*renderiza a imagem ao tamanho da tela*/
+    background-size: cover;
+       
+}
+
+/* Estilo para todas as imagens */
+img {
+    /* Define a largura de todas as imagens como 300 pixels */
+    width: 100vh;
+    /* Aplica uma animação chamada "float" com duração de 3 segundos, suavização "ease-in-out" e repetição infinita */
+    animation: float 0.3ms ease-in-out infinite; 
+}
+
+/* Define a animação "float" */
+@keyframes float {
+    /* Define o estado inicial e final da animação onde o elemento está na mesma posição */
+    0%, 100% {
+        transform: translateY(30px);
+    }
+    /* Define o estado intermediário da animação onde o elemento é transladado verticalmente para baixo 50 pixels */
+    50% {
+        transform: translateX(700px);    
+    }
+}
